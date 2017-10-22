@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Analyzer</title>
+</head>
+<body>
+    {% for item in list %}
+        <a href="{% url 'index' %}?graph={{item}}">{{item}}</a>
+    {% endfor %}
+   {{ graph | safe }}
+    <!--{{ message }}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit"/>
+    </form>-->
+</body>
+</html>
