@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Data Analyzer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'data_analyzer/bootstrap.min.css' %}"/>
 </head>
 <body>
+    <ul class="nav nav-pills ">
     {% for item in list %}
-        <a href="{% url 'index' %}?graph={{item}}">{{item}}</a>
+        <li><a href="{% url 'index' %}?graph={{item}}" >{{item}}</a></li>
     {% endfor %}
+    </ul>
    {{ graph | safe }}
     <!--{{ message }}
     <form action="" method="post">

@@ -466,16 +466,16 @@ def birth_coursewise():
     return plotly.offline.plot(fig, validate=False, output_type='div')
 
 
-options = {1 : countries_graph,
-           2 : student_category_countrywise,
-           3 : gender_countrywise,
-           4 : education_countrywise,
-           5 : birth_countrywise,
-           6 : course_countrywise,
-           7 : student_category_coursewise,
-           8 : gender_countrywise,
-           9 : education_coursewise,
-           10 : birth_coursewise,
+options = {'Contries Graph' : countries_graph,
+            'Student Category Countrywise': student_category_countrywise,
+            'Gender Countriwise' : gender_countrywise,
+            'Education Countriwise' : education_countrywise,
+            'Birth Countriwise' : birth_countrywise,
+            'Course Countriwise' : course_countrywise,
+            'Student Category Coursewise' : student_category_coursewise,
+            'Gender Coursewise' : gender_countrywise,
+            'Education Coursewise' : education_coursewise,
+            'Birth Coursewise' : birth_coursewise,
 }
 
 

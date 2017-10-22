@@ -14,8 +14,10 @@ from django.http import HttpResponseRedirect
 
 
 def index(request):
-    graph = maincode.options[int(request.GET['graph'])]()
-    return render(request, 'index.html', {'list': [i for i in range(1,11)], 'graph': graph})
+    if 'graph' in request.GET:
+        graph = maincode.options[request.GET['graph']]()
+        return render(request, 'index.html', {'list': list(maincode.options.keys()), 'graph': graph})
+    return render(request, 'index.html', {'list': list(maincode.options.keys())})
 
 
 #
